@@ -1,0 +1,139 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #e0f2fe, #ffffff);
+    text-align: center;
+    padding: 30px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #1e40af;
+}
+
+/* Form Styling */
+form {
+    margin-bottom: 20px;
+}
+
+
+input[type="text"] {
+    padding: 8px;
+    width: 200px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+
+/* Button Styling */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+button:hover {
+    background-color: #4338ca;
+    transform: scale(1.05);
+}
+
+/* Board Table Styling */
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+}
+
+td {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #cbd5e1;
+    background-color: #e0f7ff;
+    vertical-align: top;
+    position: relative;
+    font-size: 14px;
+    font-weight: bold;
+    color: #0f172a;
+    position: relative;
+    text-align: center;
+    padding: 3px;
+}
+
+
+/* Highlighting player positions */
+td span.player {
+    display: block;
+    font-size: 10px;
+    font-weight: bold;
+    color: #ef4444;
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+}
+
+/* Alternate cell coloring for better visibility */
+tr:nth-child(even) td {
+    background-color: #bae6fd;
+}
+
+td i {
+    font-size: 16px;
+    display: block;
+    margin-top: 2px;
+}
+
+.player {
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ef4444;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+/* Message Styling */
+#message {
+    font-size: 20px;
+    margin: 20px 0;
+    color: #1e3a8a;
+    font-weight: 600;
+}
+
+.player i {
+    color: #1e3a8a;
+    margin-right: 3px;
+}
+
+/* Tooltip */
+td i[title] {
+    position: relative;
+    cursor: pointer;
+}
+
+
+td i[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    background-color: #111827;
+    color: #f9fafb;
+    padding: 3px 6px;
+    font-size: 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+    transform: translateY(-2px);
+    z-index: 5;
+}
